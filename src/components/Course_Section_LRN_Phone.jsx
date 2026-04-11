@@ -1,0 +1,58 @@
+import React from 'react'
+
+const Course_Section_LRN_Phone = () => {
+    const courses = [
+      { id: 1, code: 'BSE' },
+      { id: 2, code: 'BSIT' },
+      { id: 3, code: 'BSPA' },
+      { id: 4, code: 'BSSW' },
+      { id: 5, code: 'BTVTED' },
+      { id: 6, code: 'BSAIS' },
+      { id: 7, code: 'BSA' },
+      { id: 8, code: 'BAELS' },
+      { id: 9, code: 'DHRS' }
+    ];
+    const sections = [
+      { id: 1, code: '1A' },
+      { id: 2, code: '2A' },
+      { id: 3, code: '3A' },
+      { id: 4, code: '4A' },
+      { id: 5, code: '1B' },
+      { id: 6, code: '2B' },
+      { id: 7, code: '3B' },
+      { id: 8, code: '4B' },
+      { id: 9, code: '1C' },
+      { id: 10, code: '2C' },
+      { id: 11, code: '3C' },
+      { id: 12, code: '4C' },
+      { id: 13, code: '1D' },
+      { id: 14, code: '2D' },
+      { id: 15, code: '3D' },
+      { id: 16, code: '4D' },
+    ];
+  return (
+    <div>
+        <div>
+            <select>
+            {courses.map((course) =>(
+                <option key={course.id} value={course.id}>
+                {course.code}
+                </option>
+            ))}
+            </select>
+        </div>
+
+        <div>
+            <select>
+            {sections.map((section) =>(
+                <option key={section.id} value={section.id}>
+                {section.code}
+                </option>
+            ))}
+            </select>
+        </div>
+    </div>
+  )
+}
+
+export default Course_Section_LRN_Phone

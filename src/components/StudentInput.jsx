@@ -4,17 +4,7 @@ const StudentInput = () => {
     const [Name, setName] = useState("");
     const [StudentID, setStudentId] = useState("");
     const [email, setEmail] = useState("");
-    const courses = [
-      { id: 1, code: 'BSE' },
-      { id: 2, code: 'BSIT' },
-      { id: 3, code: 'BSPA' },
-      { id: 4, code: 'BSSW' },
-      { id: 5, code: 'BTVTED' },
-      { id: 6, code: 'BSAIS' },
-      { id: 7, code: 'BSA' },
-      { id: 8, code: 'BAELS' },
-      { id: 9, code: 'DHRS' }
-    ];
+    
 
   return (
     <div>
@@ -31,16 +21,6 @@ const StudentInput = () => {
         <h2>Hello User {Name}</h2>
         <h2>Student ID {StudentID}</h2>
         <h2>Email:  {email}</h2>
-      </div>
-      
-      <div>
-        <select>
-          {courses.map((course) =>(
-            <option key={course.id} value={course.id}>
-              {course.code}
-            </option>
-          ))}
-        </select>
       </div>
     </div>
   )
