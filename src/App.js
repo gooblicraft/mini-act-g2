@@ -1,7 +1,11 @@
+import DropdownMenu from "./components/DropDownMenu";
 import StudentInput from "./components/StudentInput";
 function App() {
   return (
-    <StudentInput></StudentInput>
+    <div>
+      <StudentInput></StudentInput>
+    </div>
+    
   )
 }
 
