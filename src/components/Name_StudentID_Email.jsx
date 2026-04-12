@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const StudentInput = () => {
+const Name_StudentID_Email = () => {
     const [Name, setName] = useState("");
     const [StudentID, setStudentId] = useState("");
     const [email, setEmail] = useState("");
@@ -26,4 +26,4 @@ const StudentInput = () => {
   )
 }
 
-export default StudentInput
+export default Name_StudentID_Email
