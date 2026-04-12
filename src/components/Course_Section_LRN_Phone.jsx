@@ -34,9 +34,10 @@ const Course_Section_LRN_Phone = () => {
     const [LRN, setLRN] = useState("");
     const [phoneNum, setPhoneNum] = useState("");
   return (
-    <div>
+    <div className='flex flex-row gap-5'>
         <div>
-          <select>
+          <label className='block mb-1' for='course'>Course: </label>
+          <select className='rounded-lg bg-neutral-300 w-[190px] px-4 py-2 h-10' id='course'>
           {courses.map((course) =>(
               <option key={course.id} value={course.id}>
               {course.code}
@@ -46,7 +47,8 @@ const Course_Section_LRN_Phone = () => {
         </div>
 
         <div>
-          <select>
+          <label className='block mb-1' for='section'>Section: </label>
+          <select className='rounded-lg bg-neutral-300 w-[190px] px-4 py-2 h-10' id='section'>
           {sections.map((section) =>(
               <option key={section.id} value={section.id}>
               {section.code}
@@ -56,13 +58,15 @@ const Course_Section_LRN_Phone = () => {
         </div>
         
         <div>
-          <input type='text' id='lrn' placeholder='Input your LRN' onInput={(e) => setLRN(e.target.value)}></input>
-          <h2>Your LRN: {LRN}</h2>
+          <label className='block mb-1' for='lrn'>Learner's Reference Number: </label>
+          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='lrn' placeholder='Input your LRN' onInput={(e) => setLRN(e.target.value)}></input>
+          {/* <h2>Your LRN: {LRN}</h2> */}
         </div>
 
         <div>
-          <input type='text' id='phoneNumber' placeholder='Input your Phone Number' onInput={(e) => setPhoneNum(e.target.value)}></input>
-          <h2>Phone Number: {phoneNum}</h2>
+          <label className='block mb-1' for='phoneNumber'>Phone Number: </label>
+          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='phoneNumber' placeholder='Input your Phone Number' onInput={(e) => setPhoneNum(e.target.value)}></input>
+          {/* <h2>YOUR Phone Number: {phoneNum}</h2> */}
         </div>
     </div>
   )

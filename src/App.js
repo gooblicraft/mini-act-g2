@@ -3,7 +3,7 @@ import Name_StudentID_Email from "./components/Name_StudentID_Email";
 import Age_Sex_Height_Weight_Nationality from "./components/Age_Sex_Height_Weight_Nationality";
 function App() {
   return (
-    <div>
+    <div className='min-h-screen bg-slate-100 p-6'>
       <Name_StudentID_Email></Name_StudentID_Email>
       <Course_Section_LRN_Phone></Course_Section_LRN_Phone>
       <Age_Sex_Height_Weight_Nationality></Age_Sex_Height_Weight_Nationality>

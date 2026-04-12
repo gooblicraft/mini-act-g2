@@ -8,20 +8,26 @@ const Name_StudentID_Email = () => {
 
   return (
     <div>
-      <div>
-        <label for='name'>Name: </label>
-        <input type='text' id='name' placeholder='Input your name' onInput={(e) => setName(e.target.value)}></input>
+      <div className='flex flex-row gap-5'>
+        <div>
+          <label className='block mb-1' for='name'>Name: </label>
+          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='name' placeholder='Input your name' onInput={(e) => setName(e.target.value)}></input>
+        </div>
 
-        <label for='studentID'>Student ID: </label>
-        <input type='text' id='studentID' placeholder='Input your Student ID' onInput={(e) => setStudentId(e.target.value)}></input>
+        <div>
+          <label className='block mb-1' for='studentID'>Student ID: </label>
+          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='studentID' placeholder='Input your Student ID' onInput={(e) => setStudentId(e.target.value)}></input>
+        </div>
 
-        <label for='email'>Email: </label>
-        <input type='text' id='email' placeholder='Input your Email' onInput={(e) => setEmail(e.target.value)}></input>
-
-        <h2>Hello User {Name}</h2>
-        <h2>Student ID {StudentID}</h2>
-        <h2>Email:  {email}</h2>
+        <div>
+          <label className='block mb-1' for='email'>Email: </label>
+          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='email' placeholder='Input your Email' onInput={(e) => setEmail(e.target.value)}></input>
+        </div>
       </div>
+      
+      {/* <h2>Hello User {Name}</h2>
+      <h2>Student ID {StudentID}</h2>
+      <h2>Email:  {email}</h2> */}
     </div>
   )
 }
