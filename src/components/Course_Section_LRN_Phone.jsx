@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Course_Section_LRN_Phone = () => {
     const courses = [
@@ -30,26 +30,39 @@ const Course_Section_LRN_Phone = () => {
       { id: 15, code: '3D' },
       { id: 16, code: '4D' },
     ];
+
+    const [LRN, setLRN] = useState("");
+    const [phoneNum, setPhoneNum] = useState("");
   return (
     <div>
         <div>
-            <select>
-            {courses.map((course) =>(
-                <option key={course.id} value={course.id}>
-                {course.code}
-                </option>
-            ))}
-            </select>
+          <select>
+          {courses.map((course) =>(
+              <option key={course.id} value={course.id}>
+              {course.code}
+              </option>
+          ))}
+          </select>
         </div>
 
         <div>
-            <select>
-            {sections.map((section) =>(
-                <option key={section.id} value={section.id}>
-                {section.code}
-                </option>
-            ))}
-            </select>
+          <select>
+          {sections.map((section) =>(
+              <option key={section.id} value={section.id}>
+              {section.code}
+              </option>
+          ))}
+          </select>
+        </div>
+        
+        <div>
+          <input type='text' id='lrn' placeholder='Input your LRN' onInput={(e) => setLRN(e.target.value)}></input>
+          <h2>Your LRN: {LRN}</h2>
+        </div>
+
+        <div>
+          <input type='text' id='phoneNumber' placeholder='Input your Phone Number' onInput={(e) => setPhoneNum(e.target.value)}></input>
+          <h2>Phone Number: {phoneNum}</h2>
         </div>
     </div>
   )
