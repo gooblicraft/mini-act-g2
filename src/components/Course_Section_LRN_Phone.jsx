@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Course_Section_LRN_Phone = ({ course, setCourse, section, setSection, lrn, setLrn, phoneNum, setPhoneNum, missingFields }) => {
+  const inputClass400 = 'rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10';
+  const selectClass190 = 'rounded-lg bg-neutral-300 w-[190px] px-4 py-2 h-10';
     const courses = [
       { id: 1, code: 'BSE' },
       { id: 2, code: 'BSIT' },
@@ -34,35 +36,35 @@ const Course_Section_LRN_Phone = ({ course, setCourse, section, setSection, lrn,
     <div className='flex flex-row gap-5'>
         <div>
           <label className='block mb-1 font-bold' for='course'>Course: </label>
-            <select className='rounded-lg bg-neutral-300 w-[190px] px-4 py-2 h-10' id='course' value={course} onChange={(e) => setCourse(e.target.value)}>
-          {courses.map((course) =>(
-              <option key={course.id} value={course.code}>
-              {course.code}
-              </option>
-          ))}
-          </select>
+            <select className={selectClass190} id='course' value={course} onChange={(e) => setCourse(e.target.value)}>
+            {courses.map((course) =>(
+                <option key={course.id} value={course.code}>
+                {course.code}
+                </option>
+            ))}
+            </select>
         </div>
 
         <div>
           <label className='block mb-1 font-bold' for='section'>Section: </label>
-            <select className='rounded-lg bg-neutral-300 w-[190px] px-4 py-2 h-10' id='section' value={section} onChange={(e) => setSection(e.target.value)}>
-          {sections.map((section) =>(
-              <option key={section.id} value={section.code}>
-              {section.code}
-              </option>
-          ))}
-          </select>
+            <select className={selectClass190} id='section' value={section} onChange={(e) => setSection(e.target.value)}>
+            {sections.map((section) =>(
+                <option key={section.id} value={section.code}>
+                {section.code}
+                </option>
+            ))}
+            </select>
         </div>
         
         <div>
           <label className='block mb-1 font-bold' for='lrn'>Learner's Reference Number: </label>
-          <input className={`rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10 ${missingFields.lrn ? 'ring-2 ring-red-500' : ''}`} type='text' id='lrn' placeholder='Input your LRN' value={lrn} onChange={(e) => setLrn(e.target.value)}></input>
+          <input className={`${inputClass400} ${missingFields.lrn ? 'ring-2 ring-red-500' : ''}`} type='text' id='lrn' placeholder='Input your LRN' value={lrn} onChange={(e) => setLrn(e.target.value)}></input>
           {/* <h2>Your LRN: {LRN}</h2> */}
         </div>
 
         <div>
           <label className='block mb-1 font-bold' for='phoneNumber'>Phone Number: </label>
-          <input className={`rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10 ${missingFields.phoneNum ? 'ring-2 ring-red-500' : ''}`} type='text' id='phoneNumber' placeholder='Input your Phone Number' value={phoneNum} onChange={(e) => setPhoneNum(e.target.value)}></input>
+          <input className={`${inputClass400} ${missingFields.phoneNum ? 'ring-2 ring-red-500' : ''}`} type='text' id='phoneNumber' placeholder='Input your Phone Number' value={phoneNum} onChange={(e) => setPhoneNum(e.target.value)}></input>
           {/* <h2>YOUR Phone Number: {phoneNum}</h2> */}
         </div>
     </div>

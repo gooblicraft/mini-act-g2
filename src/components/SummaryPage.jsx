@@ -117,7 +117,7 @@ const SummaryPage = ({ values, onBack }) => {
             <div className='flex flex-col gap-5'>
               <div className='flex flex-row gap-5'>
                 <div>
-                  <label className='block mb-1 font-bold'>DateBirth: (date)</label>
+                  <label className='block mb-1 font-bold'>Birthdate: (date)</label>
                   <input className='rounded-lg bg-neutral-300 w-[190px] px-4 py-2 h-10' type='text' value={dateBirth} readOnly></input>
                 </div>
 
@@ -127,7 +127,7 @@ const SummaryPage = ({ values, onBack }) => {
                 </div>
 
                 <div>
-                  <label className='block mb-1 font-bold'>PlaceBirth: </label>
+                  <label className='block mb-1 font-bold'>Birthplace: </label>
                   <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' value={placeBirth} readOnly></input>
                 </div>
 
