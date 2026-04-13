@@ -1,27 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Name_StudentID_Email = () => {
-    const [Name, setName] = useState("");
-    const [StudentID, setStudentId] = useState("");
-    const [email, setEmail] = useState("");
+const Name_StudentID_Email = ({ name, setName, studentId, setStudentId, email, setEmail, missingFields }) => {
     
 
   return (
     <div>
       <div className='flex flex-row gap-5'>
         <div>
-          <label className='block mb-1' for='name'>Name: </label>
-          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='name' placeholder='Input your name' onInput={(e) => setName(e.target.value)}></input>
+          <label className='block mb-1 font-bold' for='name'>Name: </label>
+          <input className={`rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10 ${missingFields.name ? 'ring-2 ring-red-500' : ''}`} type='text' id='name' placeholder='Input your name' value={name} onChange={(e) => setName(e.target.value)}></input>
         </div>
 
         <div>
-          <label className='block mb-1' for='studentID'>Student ID: </label>
-          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='studentID' placeholder='Input your Student ID' onInput={(e) => setStudentId(e.target.value)}></input>
+          <label className='block mb-1 font-bold' for='studentID'>Student ID: </label>
+          <input className={`rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10 ${missingFields.studentId ? 'ring-2 ring-red-500' : ''}`} type='text' id='studentID' placeholder='Input your Student ID' value={studentId} onChange={(e) => setStudentId(e.target.value)}></input>
         </div>
 
         <div>
-          <label className='block mb-1' for='email'>Email: </label>
-          <input className='rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10' type='text' id='email' placeholder='Input your Email' onInput={(e) => setEmail(e.target.value)}></input>
+          <label className='block mb-1 font-bold' for='email'>Email: </label>
+          <input className={`rounded-lg bg-neutral-300 w-[400px] px-4 py-2 h-10 ${missingFields.email ? 'ring-2 ring-red-500' : ''}`} type='text' id='email' placeholder='Input your Email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
         </div>
       </div>
       
